@@ -23,9 +23,11 @@ public:
     string getDisplayName(){
         return Name + " : $" + to_string(Price) + "\n";
     }
+
     string getShortName(){
         return Name.substr(0,1);
     }
+
     friend class Item;
     friend class Cart;
 };
@@ -45,6 +47,7 @@ public:
     string getItemInfo(){
         return to_string(quantity)+ " x " + product.Name + ": $ "+ to_string(quantity * product.Price)+'\n';
     }
+
     friend class Cart;
 };
 
@@ -60,6 +63,7 @@ public:
             items[product.ID].quantity +=1;
         }
     }
+
     int getTotal(){
         int total = 0;
         for(const auto &itemPair : items){
@@ -68,6 +72,7 @@ public:
         }
         return total;
     }
+
     string viewCart(){
         if(items.empty()){
             return "Cart is empty";

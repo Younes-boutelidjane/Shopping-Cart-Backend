@@ -11,7 +11,7 @@ vector<Product> allProducts={
 
 Product* ChooseProduct(){
     string product_list;
-    cout << "Available Products " << endl;
+    cout << "Available Products: " << endl;
 
     for(auto product : allProducts){
         product_list.append(product.getDisplayName());

@@ -35,7 +35,7 @@ public:
 class Item{
     Product product;
     int quantity;
-
+ 
 public:
     Item(){}
     Item(Product p, int q): product(p), quantity(q){}
